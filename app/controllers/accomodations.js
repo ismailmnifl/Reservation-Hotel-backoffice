@@ -13,8 +13,7 @@ module.exports = {
         try {
             const { bedTypeId, accomodationTypeId } = req.params;
 
-            console.log(bedTypeId);
-            console.log(accomodationTypeId);
+
             const newAccomodation = new Accomodation(req.body);
             const bed = await BedType.findById(bedTypeId);
             const accomType = await AccomodationType.findById(accomodationTypeId);
