@@ -28,7 +28,7 @@ module.exports = {
             const { pensionId } = req.params;
             await Pension.findByIdAndDelete(pensionId);
             res.status(200).json({
-                message: 'the pension way deleted succesfully !'
+                message: 'the pension was deleted succesfully !'
             })
         } catch (error) {
             next(error);

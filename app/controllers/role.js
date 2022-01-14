@@ -24,6 +24,7 @@ module.exports = {
     deleteRole: async(req, res, next) => {
         try {
             const { roleId } = req.params;
+
             const deletedRole = await Role.findByIdAndDelete(roleId);
             res.status(200).json({
                 message: "role deleted succesfully !"

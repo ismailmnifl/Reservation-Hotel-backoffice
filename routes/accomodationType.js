@@ -1,14 +1,18 @@
 const express = require('express');
 const router = express.Router();
 
-const authController = require('../app/controllers/accomodationType');
+const accomdationTypethController = require('../app/controllers/accomodationType');
 
 
 router.route('/')
+    .get(accomdationTypethController.getAllAccomodationType)
+    .post(accomdationTypethController.newAccomodationType);
 
 
 
 router.route('/:accomodationsTypeId')
+    .delete(accomdationTypethController.deleteAccomodationType)
+    .patch(accomdationTypethController.updateAccomodationType);
 
 
 module.exports = router;

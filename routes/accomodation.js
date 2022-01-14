@@ -7,8 +7,9 @@ const accomController = require('../app/controllers/accomodations');
 router.route('/')
     .get(accomController.getAllAccomodation)
     .get(accomController.getSingleAccomodation)
-    .post(accomController.newAccomodation);
 
+router.route('/:accomodationTypeId/:bedTypeId')
+    .post(accomController.newAccomodation);
 
 router.route('/:accomodationId')
     .patch(accomController.updateAccomodation)

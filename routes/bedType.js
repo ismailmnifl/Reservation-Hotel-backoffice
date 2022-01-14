@@ -13,6 +13,6 @@ router.route('/')
 router.route('/:bedTypeId')
     .delete(bedTypeController.deletebedType)
     .get(bedTypeController.getSinglebedType)
-    .patch(bedTypeController.updatebedType)
+    .patch(bedTypeController.updatebedType);
 
 module.exports = router;

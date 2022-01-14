@@ -95,7 +95,7 @@ module.exports = {
             const { userId } = req.params;
             const result = await User.findByIdAndDelete(userId);
             res.status(202).json({
-                message: "deleted succefully"
+                message: "user was deleted succefully"
             });
 
         } catch (error) {
